@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flauto"
+version = "0.1.0"
+dependencies = [
+  "opencv-python",
+  "numpy",
+  "matplotlib",
+  "scipy",
+  "pandas",
+  "pytest",
+  "nicegui",
+  "depthai",
+  "pyzmq",
+  "ruff",
+  "mypy"
+]
+
+[project.scripts]
+flauto-camerafeed = "flauto.camera_feed:main"
+
+[tool.setuptools]
+packages = ["flauto"]
+package-dir = {"" = "src"}
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+lint.select = [
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "UP",  # pyupgrade
+]
+
+include = [
+  "flauto/*.py"
+]
+
+exclude = [
+  "bots",
+  "scripts",
+  "tests"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["./tests"]

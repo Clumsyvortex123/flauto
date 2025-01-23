@@ -1,0 +1,11 @@
+opencv-python
+numpy
+matplotlib
+scipy
+pandas
+pytest
+nicegui
+depthai
+pyzmq
+ruff
+mypy

@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: flauto
+Version: 0.1.0
+License-File: LICENSE
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: pytest
+Requires-Dist: nicegui
+Requires-Dist: depthai
+Requires-Dist: pyzmq
+Requires-Dist: ruff
+Requires-Dist: mypy

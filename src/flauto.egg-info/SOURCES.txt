@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/flauto/__init__.py
+src/flauto/builder.py
+src/flauto/camera_feed.py
+src/flauto/utils.py
+src/flauto.egg-info/PKG-INFO
+src/flauto.egg-info/SOURCES.txt
+src/flauto.egg-info/dependency_links.txt
+src/flauto.egg-info/entry_points.txt
+src/flauto.egg-info/requires.txt
+src/flauto.egg-info/top_level.txt
+tests/test_builder.py
