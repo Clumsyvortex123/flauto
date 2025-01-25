@@ -1,6 +1,7 @@
 #!/bin/bash
-
+echo "Create a new folder and place the repository inside that folder"
 # Set the virtual environment name
+
 VENV_NAME="venv"
 
 # Step 1: Update the system and install required tools
@@ -19,6 +20,7 @@ rm -f packages.microsoft.gpg
 
 # Step 2: Create the virtual environment
 echo "Creating a virtual environment: $VENV_NAME..."
+cd .. # Moving to the root folder to create the virtual environment
 python3 -m venv $VENV_NAME
 
 # Step 3: Activate the virtual environment
