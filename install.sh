@@ -1,7 +1,29 @@
 #!/bin/bash
-echo "Create a new folder and place the repository inside that folder"
-# Set the virtual environment name
+# Create a new directory (you can change the folder name)
+NEW_DIR=~/Bimetal
 
+# Check if the directory already exists
+if [ ! -d "$NEW_DIR" ]; then
+    echo "Creating new directory: $NEW_DIR"
+    mkdir "$NEW_DIR"
+else
+    echo "Directory $NEW_DIR already exists."
+fi
+
+# Move all files from the current repository to the new directory
+echo "Moving files into $NEW_DIR..."
+cd ..
+mv flauto "$NEW_DIR/"
+mv .[^.]* "$NEW_DIR/"  # This moves hidden files/folders like .gitignore, .git, etc.
+
+# Check if files were moved successfully
+if [ $? -eq 0 ]; then
+    echo "Files successfully moved to $NEW_DIR."
+else
+    echo "Error moving files."
+fi
+cd $NEW_DIR
+# Set the virtual environment name
 VENV_NAME="venv"
 
 # Step 1: Update the system and install required tools
@@ -20,7 +42,6 @@ rm -f packages.microsoft.gpg
 
 # Step 2: Create the virtual environment
 echo "Creating a virtual environment: $VENV_NAME..."
-cd .. # Moving to the root folder to create the virtual environment
 python3 -m venv $VENV_NAME
 
 # Step 3: Activate the virtual environment
@@ -40,3 +61,4 @@ echo "Installation complete!"
 echo "The virtual environment '$VENV_NAME' is ready to use."
 echo "To activate it manually in the future, run:"
 echo "source $VENV_NAME/bin/activate"
+cd flauto
