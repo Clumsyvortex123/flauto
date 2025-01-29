@@ -54,7 +54,7 @@ pip install --upgrade pip
 
 # Step 5: Install required Python packages
 echo "Installing required Python packages..."
-pip install tensorflow opencv-python numpy nicegui matplotlib pandas scipy scikit-learn pillow  tensorflow-datasets torch torchvision torchaudio tensorboard plotly seaborn 
+pip install tensorflow opencv-python numpy nicegui matplotlib pandas scipy scikit-learn pillow  tensorflow-datasets torch torchvision torchaudio tensorboard plotly seaborn ultralytics  
 
 # Step 6: Confirm installation
 echo "Installation complete!"
